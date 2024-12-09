@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Halo Fatih</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div id="logo">
+				
+			</div>
+			<div id="navigation">
+				<a href="checkout.html" class="cart"></a>
+				<ul>
+					<li class="selected">
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="news.html">New Arrivals</a>
+					</li>
+					<li>
+						<a href="scents.html">Brands</a>
+					</li>
+					<li>
+						<a href="shop.html">Best Sellers</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="blog.html">Skincare Guide</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="contents">
+			<div id="adbox">
+				<img src="images/korean-beauty-products-mob.jpg" width="900" height="350" alt="Korean Beauty Products">
+			</div>
+		</div>
+		
+		<script>
+		// Welcome Overlay
+		document.addEventListener('DOMContentLoaded', function() {
+			const overlay = document.createElement('div');
+			overlay.id = 'welcome-overlay';
+			overlay.innerHTML = `
+				<div class="welcome-content">
+					<h1>Welcome to Our Korean Beauty Shop! Hii Professor Fatih! </h1>
+					<p>Halo professor Discover the secrets of K-Beauty</p>
+					<button id="enter-site">Enter Site</button>
+				</div>
+			`;
+			document.body.appendChild(overlay);
+		
+			document.getElementById('enter-site').addEventListener('click', function() {
+				overlay.style.opacity = '0';
+				setTimeout(() => overlay.remove(), 500);
+			});
+		});
+		
+		// Image Slideshow
+		let currentSlide = 0;
+		const images = [
+			'images/korean-beauty-products-mob.jpg',
+			'images/product2.jpg', // Make sure these paths are correct
+			'images/product3.jpg'  // Make sure these paths are correct
+		];
+		
+		function changeSlide() {
+			currentSlide = (currentSlide + 1) % images.length;
+			const img = document.querySelector('#adbox img');
+			img.style.opacity = '0';
+			setTimeout(() => {
+				img.src = images[currentSlide];
+				img.style.opacity = '1';
+			}, 500);
+		}
+		
+		setInterval(changeSlide, 5000); // Change slide every 5 seconds
+		
+		// Product Popup
+		document.querySelector('#adbox img').addEventListener('click', function() {
+			const popup = document.createElement('div');
+			popup.className = 'product-popup';
+			popup.innerHTML = `
+				<div class="popup-content">
+					<h2>Featured Product</h2>
+					<p>This amazing Korean beauty product will transform your skin!</p>
+					<button id="close-popup">Close</button>
+				</div>
+			`;
+			document.body.appendChild(popup);
+		
+			document.getElementById('close-popup').addEventListener('click', function() {
+				popup.remove();
+			});
+		});
+		</script>
+		
+		<style>
+		/* General Styles */
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+		}
+		
+		#contents {
+			max-width: 900px; /* Adjust to fit your design */
+			margin: 0 auto; /* Center the content */
+		}
+		
+		/* Ad Box Styles */
+		#adbox {
+			position: relative;
+		}
+		
+		#adbox img {
+			width: 100%; /* Make image responsive */
+			height: auto; /* Maintain aspect ratio */
+			transition: opacity 0.5s;
+		}
+		
+		/* Welcome Overlay Styles */
+		#welcome-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(255,255,255,0.9);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1000;
+		}
+		
+		.welcome-content {
+			text-align: center;
+		}
+		
+		/* Product Popup Styles */
+		.product-popup {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.7);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.popup-content {
+			background: white;
+			padding: 20px;
+			border-radius: 10px;
+			text-align: center;
+		}
+		</style>
+			<div id="body">
+				<div id="sidebar">
+					<div>
+						<a href="index.html"><img src="images/banner_a01e76e4-4533-41fb-a39d-df1c8f432aff_1400x.webp" width="260" height="290" alt="Img"></a>
+					</div>
+					<div>
+						<a href="index.html"><img src="images/korean-glass-skin-treatment.jpeg" width="260" height="290" alt="Img"></a>
+					</div>
+					
+					</form>
+					<div id="connect">
+						<h3>Click these for more tutorials</h3>
+						<ul>
+							<li>
+								<a href="https://youtu.be/gvcf__7YKZ0" target="_blank" class="facebook"></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/watch?v=O_qgaOUR3Fo&pp=ygUSc2tpbmNhcmUgdHV0b3JpYWxz" target="_blank" class="twitter"></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/shorts/LoL2Ef9Lgkc" target="_blank" class="googleplus"></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/watch?v=y46hvE9JAXo&pp=ygUSc2tpbmNhcmUgdHV0b3JpYWxz" target="_blank" class="vimeo"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="featured">
+					<h3>It's glow time!
+						Be the first to glow!</h3>
+					<ul>
+						<li>
+							<img src="images/Soko-Glam-PDP-Soko-Glam-10-Step-Korean-Skincare-Routine-Set-Combination-Skin-Type_860x.webp" width="200" height="200" alt="Img">
+							<h4>Things what I did</h4>
+							<p>
+								I made the changes. Put my own photos and and hyperlinks on every page of the website. i have created JavaScript on welcome page along with the emailing and sending and newspaper subscribtions as well.
+							</p>
+							
+						</li>
+						<li>
+							<img src="images/sale.gif" width="200" height="200"alt="Img">
+							<h4>Sale & Offers</h4>
+							<p>
+								Don’t miss out on our special offers for top K-beauty products. Whether it’s soothing sheet masks or hydrating essences, explore favourites from COSRX, ANUA, Beauty of Joseon, Torriden - now at amazing prices.  
+							</p>
+							
+						</li>
+					</ul>
+				</div>
+				<div id="links">
+					<div>
+						<h3>SkincareGuide</h3>
+						<ul class="blog">
+							<li>
+								&#8226; <a href="blog.html">The Famous 10 Steps <span class="time"></span></a>
+							</li>
+							<li>
+								&#8226; <a href="blog.html">7 Step Korean Skincare routine <span class="time"></span></a>
+							</li>
+							<li>
+							
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Shop</h3>
+						<ul>
+							<li>
+								&#8226; <a href="shop.html">COSRX</a>
+							</li>
+							<li>
+								&#8226; <a href="shop.html">ANUA</a>
+							</li>
+							<li>
+								&#8226; <a href="shop.html">Beauty of Joseon</a>
+							</li>
+							<li>
+								&#8226; <a href="shop.html">Torriden</a>
+							</li>
+							<li>
+								&#8226; <a href="shop.html">Numbuzin</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul class="navigation">
+					<li class="selected">
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="news.html">New Arrivals</a>
+					</li>
+					<li>
+						<a href="scents.html">Brands</a>
+					</li>
+					<li>
+						<a href="shop.html">Best Sellers</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="blog.html">Skincare Guide</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+				<p>
+					<marquee> Ergasheva Madinabonu Khansanboy Kizi. Student ID:24314026</marquee>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Contact - Glossy K-Beauty</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div id="logo">
+				
+			</div>
+			<div id="navigation">
+				<a href="checkout.html" class="cart"></a>
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="news.html">New Arrivals</a>
+					</li>
+					<li>
+						<a href="scents.html">Brands</a>
+					</li>
+					<li>
+						<a href="shop.html">Best Sellers</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="blog.html">Skincare Guide</a>
+					</li>
+					<li class="selected">
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="contents">
+			<div id="adbox">
+				<img src="images/korean-skincare-routine_1024x1024.webp" style="margin-top:-10px;position:relative;" width="930" height="400" alt="Img">
+			</div>
+			<div id="contact" class="body">
+				<h2>Holaa Professor</h2>
+				<div id="sidebar">
+					<div id="connect">
+						<h3>Skincare turorials</h3>
+						<ul>
+							<li>
+								<a href="https://www.youtube.com/watch?v=xPf-t38BdLM&pp=ygUSc2tpbmNhcmUgdHV0b3JpYWxz" target="_blank" class="youtube"></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/shorts/5hFl8bhGKwA" target="_blank" class="twitter"></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/shorts/c3A2sOdvM3s" target="_blank" class="googleplus"></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/watch?v=dvPJJUbM8IY&pp=ygUZc2tpbmNhcmUgdHV0b3JpYWwga29yZWFuIA%3D%3D" target="_blank" class="vimeo"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="section">
+						<h3>Contact Details</h3>
+						<ul id="infos">
+							<li>
+								<span class="address">123 Canyon Road<br> Beverly Hills, CA 12345<br> USA</span>
+							</li>
+							<li>
+								<span class="telephone">+01.234.456.786<br> +01.345.678.890</span>
+							</li>
+							<li>
+								<span class="email">mke.usman`gmail.com</span>
+							</li>
+							<li>
+								<span class="web">www.theglossyk-beauty.com(i changes the Css style for this part)</span>
+							</li>
+						</ul>
+					</div>
+					<form action="index.html" method="post" id="newsletter">
+						<h3>Subscribe to our newsletter</h3>
+						<input type="text" value="" class="txtfield" id="email" required>
+						<input type="submit" value="Sign up!" class="btn">
+					</form>
+					<div id="success-message" style="display: none;">
+						<p>Successfully subscribed!</p>
+					</div>
+					
+					<script>
+					document.getElementById('newsletter').addEventListener('submit', function(e) {
+						e.preventDefault();
+						var email = document.getElementById('email').value;
+						if (email) {
+							document.getElementById('success-message').style.display = 'block';
+							setTimeout(function() {
+								document.getElementById('success-message').style.display = 'none';
+							}, 3000);
+						}
+					});
+					</script>
+					<div>
+						<a href="index.html"><img src="images/song-hye-kyo.webp" width="260" height="260" alt="Img"></a>
+					</div>
+				</div>
+				<div id="main">
+					<div>
+						<h4>These are what I have done on this page!</h4>
+						<p>
+							I have created my own JavaSript as well for emails and submitting part and singing up to anewspaper part,  put some hyperlinks and also changed the photos edited them with my own texts. 
+						</p>
+						<h4>Here's how you can get in touch with our KBeauty fam:</h4>
+						<p>
+							Send your thoughts, queries, or virtual hugs to our friendly support team. We promise to respond within 48 hours, faster than your favorite K-pop band's new single climbing the charts!
+						</p>
+						<form id="contactForm" onsubmit="return sendEmail();" class="">
+							<label for="name">Name</label>
+							<input type="text" id="name" class="txtfield" value="">
+							<label for="email">Email</label>
+							<input type="email" id="email" class="txtfield" value="">
+							<label for="message">Message</label>
+							<textarea id="message"></textarea>
+							<input type="submit" value="Submit" class="btn">
+						</form>
+						
+						<script>
+						function sendEmail() {
+							var name = document.getElementById('name').value;
+							var email = document.getElementById('email').value;
+							var message = document.getElementById('message').value;
+							
+							var mailtoLink = 'mailto:your-email@example.com'
+								+ '?subject=' + encodeURIComponent('Contact Form Submission from ' + name)
+								+ '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+							
+							window.location.href = mailtoLink;
+							
+							return false; // Prevents the form from submitting in the traditional way
+						}
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul class="navigation">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="news.html">New Arrivals</a>
+					</li>
+					<li>
+						<a href="scents.html">Brands</a>
+					</li>
+					<li>
+						<a href="shop.html">Best Sellers</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="blog.html">Skincare Guide</a>
+					</li>
+					<li class="selected">
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+				<p>
+					© Ergasheva Madinabonu Khasanboy kizi. Student ID: 24314026
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
